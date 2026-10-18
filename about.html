@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Cloud Store</title>
+
+    <!-- Icons & Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="assets/images/image.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+      <div class="navbar-container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo.png" alt="Cloud Store Logo" />
+          <span class="brand-text"
+            >Cloud<span class="brand-accent">Store</span></span
+          >
+        </a>
+
+        <ul class="navbar-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="service.html">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <div class="navbar-actions">
+          <form class="nav-search-form" action="shop.html" method="get">
+            <input
+              class="nav-search-input"
+              type="search"
+              name="search"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+            <button
+              class="nav-search-btn"
+              type="submit"
+              aria-label="Submit search"
+            >
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+
+          <a href="shop.html?view=cart" class="nav-cart-btn" title="View Cart">
+            <i class="bi bi-cart3"></i>
+            <span class="nav-cart-badge">0</span>
+          </a>
+
+          <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer Backdrop -->
+    <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+
+    <!-- Mobile Navigation Drawer -->
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+      <div class="mobile-drawer-header">
+        <a class="drawer-brand" href="index.html">
+          <img src="assets/images/logo.png" alt="Cloud Store Logo" />
+          <span class="brand-text">Cloud<span class="brand-accent">Store</span></span>
+        </a>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <div class="mobile-drawer-search">
+        <form action="shop.html" method="get">
+          <div class="drawer-search-wrapper">
+            <input type="search" name="search" placeholder="Search servers, plans..." aria-label="Search" />
+            <button type="submit" aria-label="Submit search"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+      </div>
+
+      <nav class="mobile-drawer-nav">
+        <ul>
+          <li>
+            <a href="index.html" class="drawer-nav-link">
+              <i class="bi bi-house-door-fill"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="about.html" class="drawer-nav-link active">
+              <i class="bi bi-info-circle-fill"></i>
+              <span>About Us</span>
+            </a>
+          </li>
+          <li>
+            <a href="service.html" class="drawer-nav-link">
+              <i class="bi bi-hdd-network-fill"></i>
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a href="faq.html" class="drawer-nav-link">
+              <i class="bi bi-question-circle-fill"></i>
+              <span>FAQ</span>
+            </a>
+          </li>
+          <li>
+            <a href="shop.html" class="drawer-nav-link">
+              <i class="bi bi-bag-check-fill"></i>
+              <span>Shop &amp; Hosting</span>
+            </a>
+          </li>
+          <li>
+            <a href="contact.html" class="drawer-nav-link">
+              <i class="bi bi-envelope-fill"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="mobile-drawer-footer">
+        <a href="shop.html?view=cart" class="drawer-cart-action">
+          <div class="drawer-cart-label">
+            <i class="bi bi-cart3"></i>
+            <span>Shopping Cart</span>
+          </div>
+          <span class="drawer-cart-count">0 items</span>
+        </a>
+        <div class="drawer-support-badge">
+          <i class="bi bi-headset"></i>
+          <div>
+            <small>24/7 Priority Support</small>
+            <strong>+855 87 131 90 53</strong>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <!-- Page Banner -->
+      <div class="page-banner">
+        <div class="page-banner-container">
+          <h1>About Us</h1>
+          <div class="page-breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>About</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Intro Section -->
+      <section class="about-hero">
+        <div class="about-hero-text">
+          <h2>Empowering Next-Gen Cloud Performance</h2>
+          <p>
+            At Cloud Store, we are committed to delivering world-class web
+            hosting, high-density cloud compute, and rock-solid uptime. Whether
+            you are launching a startup, building custom applications, or
+            scaling an enterprise platform, our high-speed networks and
+            automated deployments provide the agility you need.
+          </p>
+          <p>
+            With redundant fiber connections, automated security patches, and
+            instant SSD backups, we ensure your digital assets remain online,
+            fast, and secure 24/7/365.
+          </p>
+          <a href="contact.html" class="btn-custom btn-secondary-custom">
+            <i class="bi bi-telephone-fill"></i> Contact Our Team
+          </a>
+        </div>
+        <div class="about-hero-image">
+          <img
+            src="assets/images/imageserver.png"
+            alt="Server rack architecture"
+          />
+        </div>
+      </section>
+
+      <!-- Global Data Centers Section -->
+      <section class="datacenter-section">
+        <div class="section-header">
+          <h2>Our Global Data Centers</h2>
+          <p>
+            We operate 12 enterprise-grade tier-3 facilities distributed
+            strategically across North America, Europe, and Asia-Pacific.
+          </p>
+        </div>
+        <div class="map-container">
+          <img
+            src="assets/images/map.png"
+            alt="World Map of Cloud Store Data Centers"
+            style="width: 100%; border-radius: var(--radius-sm)"
+          />
+        </div>
+      </section>
+
+      <!-- Skills & Engineering Section -->
+      <section class="skills-section">
+        <div class="skills-text">
+          <h2>Our Technical Expertise</h2>
+          <p>
+            Our seasoned infrastructure team blends deep Linux kernel
+            optimization, high-performance web servers, and container
+            orchestration to keep your websites lightning fast.
+          </p>
+          <p>
+            From automatic WordPress caching to complex database clustering, our
+            certified engineers ensure maximum throughput and sub-millisecond
+            response times.
+          </p>
+          <a
+            href="service.html"
+            class="btn-custom btn-primary-custom"
+            style="margin-top: 15px"
+          >
+            <i class="bi bi-gear-wide-connected"></i> Explore Services
+          </a>
+        </div>
+
+        <div class="skills-bars">
+          <!-- WordPress -->
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>WordPress &amp; CMS Optimization</span>
+              <span>88%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div
+                class="skill-progress-bar"
+                data-percent="88"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- HTML / Frontend -->
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Modern HTML5 &amp; Web Standards</span>
+              <span>100%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div
+                class="skill-progress-bar"
+                data-percent="100"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Linux -->
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Linux Server Hardening &amp; Cloud Kernel</span>
+              <span>81%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div
+                class="skill-progress-bar"
+                data-percent="81"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- PHP / Backend -->
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>PHP &amp; High-Throughput Microservices</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div
+                class="skill-progress-bar"
+                data-percent="90"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <img
+        class="footer-top-wave"
+        src="assets/images/footers.png"
+        alt="Footer wave decoration"
+      />
+      <div class="footer-content">
+        <div class="footer-grid">
+          <!-- Products -->
+          <div class="footer-col">
+            <h4>OUR PRODUCTS</h4>
+            <div class="footer-links-duo">
+              <ul>
+                <li><a href="service.html">Web Hosting</a></li>
+                <li><a href="service.html">Cloud Servers</a></li>
+                <li><a href="service.html">Website Builder</a></li>
+                <li><a href="service.html">Web Mail</a></li>
+              </ul>
+              <ul>
+                <li><a href="shop.html">Dedicated Servers</a></li>
+                <li><a href="shop.html">SSL Certificate</a></li>
+                <li><a href="shop.html">Domains</a></li>
+                <li><a href="shop.html">Business Email</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Center: Brand Info & Social -->
+          <div class="footer-col footer-center-col">
+            <a href="index.html" class="footer-brand-logo">
+              <img src="assets/images/logo-white.png" alt="Cloud Store Logo" />
+              <span class="footer-brand-text"
+                >Cloud<span class="brand-accent">Store</span></span
+              >
+            </a>
+            <p>
+              Contact us today and we'll help you get started with high-speed
+              hosting and cloud infrastructure built for your growth.
+            </p>
+            <div class="footer-social-icons">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://pinterest.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="Pinterest"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Support -->
+          <div class="footer-col">
+            <h4>SUPPORT</h4>
+            <div class="footer-links-duo">
+              <ul>
+                <li><a href="faq.html">System Status</a></li>
+                <li><a href="faq.html">Knowledge Base</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact.html">Report Abuse</a></li>
+              </ul>
+              <ul>
+                <li><a href="faq.html">Community Forum</a></li>
+                <li><a href="contact.html">Submit Ticket</a></li>
+                <li><a href="faq.html">Whois Lookup</a></li>
+                <li><a href="faq.html">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <p>&copy; 2026 Cloud Store. All rights reserved.</p>
+          <p>Designed for reliability, speed, and 99.99% uptime.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

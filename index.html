@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloud Store - Premium Cloud & Web Hosting Solutions</title>
+
+    <!-- Icons & Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="assets/images/image.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+      <div class="navbar-container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo.png" alt="Cloud Store Logo" />
+          <span class="brand-text"
+            >Cloud<span class="brand-accent">Store</span></span
+          >
+        </a>
+
+        <ul class="navbar-menu">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="service.html">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <div class="navbar-actions">
+          <form class="nav-search-form" action="shop.html" method="get">
+            <input
+              class="nav-search-input"
+              type="search"
+              name="search"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+            <button
+              class="nav-search-btn"
+              type="submit"
+              aria-label="Submit search"
+            >
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+
+          <a href="shop.html?view=cart" class="nav-cart-btn" title="View Cart">
+            <i class="bi bi-cart3"></i>
+            <span class="nav-cart-badge">0</span>
+          </a>
+
+          <button
+            class="mobile-nav-toggle"
+            id="mobileNavToggle"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer Backdrop -->
+    <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+
+    <!-- Mobile Navigation Drawer -->
+    <aside
+      class="mobile-drawer"
+      id="mobileDrawer"
+      aria-label="Mobile Navigation"
+      aria-hidden="true"
+    >
+      <div class="mobile-drawer-header">
+        <a class="drawer-brand" href="index.html">
+          <img src="assets/images/logo.png" alt="Cloud Store Logo" />
+          <span class="brand-text"
+            >Cloud<span class="brand-accent">Store</span></span
+          >
+        </a>
+        <button
+          class="drawer-close-btn"
+          id="drawerCloseBtn"
+          aria-label="Close navigation"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <div class="mobile-drawer-search">
+        <form action="shop.html" method="get">
+          <div class="drawer-search-wrapper">
+            <input
+              type="search"
+              name="search"
+              placeholder="Search servers, plans..."
+              aria-label="Search"
+            />
+            <button type="submit" aria-label="Submit search">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <nav class="mobile-drawer-nav">
+        <ul>
+          <li>
+            <a href="index.html" class="drawer-nav-link active">
+              <i class="bi bi-house-door-fill"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="about.html" class="drawer-nav-link">
+              <i class="bi bi-info-circle-fill"></i>
+              <span>About Us</span>
+            </a>
+          </li>
+          <li>
+            <a href="service.html" class="drawer-nav-link">
+              <i class="bi bi-hdd-network-fill"></i>
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a href="faq.html" class="drawer-nav-link">
+              <i class="bi bi-question-circle-fill"></i>
+              <span>FAQ</span>
+            </a>
+          </li>
+          <li>
+            <a href="shop.html" class="drawer-nav-link">
+              <i class="bi bi-bag-check-fill"></i>
+              <span>Shop &amp; Hosting</span>
+            </a>
+          </li>
+          <li>
+            <a href="contact.html" class="drawer-nav-link">
+              <i class="bi bi-envelope-fill"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="mobile-drawer-footer">
+        <a href="shop.html?view=cart" class="drawer-cart-action">
+          <div class="drawer-cart-label">
+            <i class="bi bi-cart3"></i>
+            <span>Shopping Cart</span>
+          </div>
+          <span class="drawer-cart-count">0 items</span>
+        </a>
+        <div class="drawer-support-badge">
+          <i class="bi bi-headset"></i>
+          <div>
+            <small>24/7 Priority Support</small>
+            <strong>+855 88 523 276 1</strong>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-container">
+          <div class="hero-text">
+            <span class="hero-badge"
+              ><i class="bi bi-lightning-charge-fill"></i> Next-Gen Cloud
+              Platform</span
+            >
+            <h1>CLOUD SERVER</h1>
+            <ul class="hero-features-list">
+              <li><i class="bi bi-check-circle-fill"></i> Free Domains</li>
+              <li><i class="bi bi-check-circle-fill"></i> Endless Bandwidth</li>
+              <li><i class="bi bi-check-circle-fill"></i> MySQL Database</li>
+              <li><i class="bi bi-check-circle-fill"></i> Unlimited Space</li>
+              <li><i class="bi bi-check-circle-fill"></i> 24/7 Full Support</li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i> Free Website Builder
+              </li>
+            </ul>
+            <a href="shop.html" class="btn-custom btn-secondary-custom">
+              Get Started <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="hero-image-wrapper">
+            <img
+              src="assets/images/imageslide.png"
+              alt="Cloud Server Infrastructure Illustration"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="py-5" style="padding: 70px 0">
+        <div class="section-header">
+          <h2>Our Hosting Services</h2>
+          <p>
+            High performance cloud infrastructure crafted for developers,
+            agencies, and businesses.
+          </p>
+        </div>
+
+        <div class="service-cards-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-card-body">
+              <div class="service-card-icon">
+                <i class="bi bi-hdd-stack"></i>
+              </div>
+              <h3 class="service-card-title">Web Hosting</h3>
+            </div>
+            <a href="shop.html" class="service-card-btn">
+              <i class="bi bi-list"></i> Plans & Pricing
+            </a>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-card-body">
+              <div class="service-card-icon">
+                <i class="bi bi-cloud-fill"></i>
+              </div>
+              <h3 class="service-card-title">Cloud Hosting</h3>
+            </div>
+            <a href="service.html" class="service-card-btn">
+              <i class="bi bi-info-circle-fill"></i> More Info
+            </a>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-card-body">
+              <div class="service-card-icon">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <h3 class="service-card-title">Programming</h3>
+            </div>
+            <a href="contact.html" class="service-card-btn">
+              <i class="bi bi-telephone-fill"></i> Free Consultation
+            </a>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-card-body">
+              <div class="service-card-icon">
+                <i class="bi bi-tv"></i>
+              </div>
+              <h3 class="service-card-title">Website Design</h3>
+            </div>
+            <a href="about.html" class="service-card-btn">
+              <i class="bi bi-table"></i> View Our Works
+            </a>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px">
+          <a href="contact.html" class="btn-custom btn-secondary-custom">
+            <i class="bi bi-gear-fill"></i> Need a Custom Plan?
+          </a>
+        </div>
+      </section>
+
+      <!-- Domain Registration Section -->
+      <section class="domain-section">
+        <div class="domain-container">
+          <h2>Register Your Domain Name</h2>
+          <p>
+            Choose the perfect identity for your website across global domain
+            extensions.
+          </p>
+
+          <div class="domain-search-box">
+            <input
+              type="text"
+              placeholder="Enter your domain name (e.g., myawesomebrand.com)"
+              id="domainInput"
+              class="domain-search-input"
+            />
+            <button
+              type="button"
+              class="domain-search-btn"
+              onclick="searchDomain()"
+            >
+              <i class="bi bi-search"></i> Search Now
+            </button>
+          </div>
+
+          <div class="domain-badge-list">
+            <div class="domain-badge-item"><span>.com</span> $12.99</div>
+            <div class="domain-badge-item"><span>.net</span> $12.99</div>
+            <div class="domain-badge-item"><span>.org</span> $12.99</div>
+            <div class="domain-badge-item"><span>.edu</span> $129.99</div>
+            <div class="domain-badge-item"><span>.cloud</span> $12.99</div>
+            <div class="domain-badge-item"><span>.us</span> $12.99</div>
+          </div>
+
+          <a href="shop.html" class="btn-custom btn-secondary-custom">
+            <i class="bi bi-globe"></i> View All Domains
+          </a>
+        </div>
+      </section>
+
+      <!-- Plan & Pricing Section -->
+      <section class="pricing-section">
+        <div class="section-header">
+          <h2>Plans &amp; Pricing</h2>
+          <p>
+            Transparent rates with zero hidden fees. Scale resources instantly
+            whenever you need.
+          </p>
+        </div>
+
+        <div class="pricing-cards-wrapper">
+          <!-- Basic Plan -->
+          <div class="pricing-card">
+            <h3>Basic</h3>
+            <div class="price">$9.99<span>/month</span></div>
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check2"></i> 500 GB Disk Space</li>
+              <li><i class="bi bi-check2"></i> 100 Databases List</li>
+              <li><i class="bi bi-check2"></i> Free Domain Registration</li>
+              <li><i class="bi bi-check2"></i> 1 Hosting Space</li>
+              <li><i class="bi bi-check2"></i> Free Ad Coupons</li>
+              <li><i class="bi bi-check2"></i> Control Panel</li>
+              <li><i class="bi bi-check2"></i> Free 24/7 Support</li>
+            </ul>
+            <a href="shop.html" class="pricing-order-btn">
+              <i class="bi bi-cart3"></i> Order Now
+            </a>
+          </div>
+
+          <!-- Standard Plan -->
+          <div class="pricing-card">
+            <h3>Standard</h3>
+            <div class="price">$12.99<span>/month</span></div>
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check2"></i> 1,000 GB Disk Space</li>
+              <li><i class="bi bi-check2"></i> 200 Databases List</li>
+              <li><i class="bi bi-check2"></i> Free Domain Registration</li>
+              <li><i class="bi bi-check2"></i> 3 Hosting Spaces</li>
+              <li><i class="bi bi-check2"></i> Free Ad Coupons</li>
+              <li><i class="bi bi-check2"></i> Control Panel</li>
+              <li><i class="bi bi-check2"></i> Free 24/7 Support</li>
+            </ul>
+            <a href="shop.html" class="pricing-order-btn">
+              <i class="bi bi-cart3"></i> Order Now
+            </a>
+          </div>
+
+          <!-- Premium Plan (Best Seller) -->
+          <div class="pricing-card featured">
+            <span class="featured-badge">Best Seller</span>
+            <h3>Premium</h3>
+            <div class="price">$19.99<span>/month</span></div>
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check2"></i> 5,000 GB Disk Space</li>
+              <li><i class="bi bi-check2"></i> 500 Databases List</li>
+              <li><i class="bi bi-check2"></i> Free Domain Registration</li>
+              <li><i class="bi bi-check2"></i> 10 Hosting Spaces</li>
+              <li><i class="bi bi-check2"></i> Free SSL &amp; Ad Coupons</li>
+              <li><i class="bi bi-check2"></i> Advanced cPanel Pro</li>
+              <li><i class="bi bi-check2"></i> Dedicated 24/7 Support</li>
+            </ul>
+            <a href="shop.html" class="pricing-order-btn">
+              <i class="bi bi-cart3"></i> Order Now
+            </a>
+          </div>
+
+          <!-- Unlimited Plan -->
+          <div class="pricing-card">
+            <h3>Unlimited</h3>
+            <div class="price">$39.99<span>/month</span></div>
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check2"></i> 50,000 GB Disk Space</li>
+              <li><i class="bi bi-check2"></i> Unlimited Databases</li>
+              <li><i class="bi bi-check2"></i> Free Domain Registration</li>
+              <li><i class="bi bi-check2"></i> 500 Hosting Spaces</li>
+              <li><i class="bi bi-check2"></i> Daily Auto Backups</li>
+              <li><i class="bi bi-check2"></i> Dedicated IP Address</li>
+              <li><i class="bi bi-check2"></i> Priority 24/7 VIP Support</li>
+            </ul>
+            <a href="shop.html" class="pricing-order-btn">
+              <i class="bi bi-cart3"></i> Order Now
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hotline Support Banner -->
+      <section class="hotline-banner">
+        <h2>Need Immediate Technical Help?</h2>
+        <p>
+          Our dedicated server engineers are on standby 24 hours a day, 7 days a
+          week.
+        </p>
+        <div class="hotline-number">
+          <i class="bi bi-headset"></i> +855 88 523 276 1
+        </div>
+      </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <img
+        class="footer-top-wave"
+        src="assets/images/image.png"
+        alt="Footer wave decoration"
+      />
+      <div class="footer-content">
+        <div class="footer-grid">
+          <!-- Products -->
+          <div class="footer-col">
+            <h4>OUR PRODUCTS</h4>
+            <div class="footer-links-duo">
+              <ul>
+                <li><a href="service.html">Web Hosting</a></li>
+                <li><a href="service.html">Cloud Servers</a></li>
+                <li><a href="service.html">Website Builder</a></li>
+                <li><a href="service.html">Web Mail</a></li>
+              </ul>
+              <ul>
+                <li><a href="shop.html">Dedicated Servers</a></li>
+                <li><a href="shop.html">SSL Certificate</a></li>
+                <li><a href="shop.html">Domains</a></li>
+                <li><a href="shop.html">Business Email</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Center: Brand Info & Social -->
+          <div class="footer-col footer-center-col">
+            <a href="index.html" class="footer-brand-logo">
+              <img src="assets/images/logo-white.png" alt="Cloud Store Logo" />
+              <span class="footer-brand-text"
+                >Cloud<span class="brand-accent">Store</span></span
+              >
+            </a>
+            <p>
+              Contact us today and we'll help you get started with high-speed
+              hosting and cloud infrastructure built for your growth.
+            </p>
+            <div class="footer-social-icons">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://pinterest.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="Pinterest"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Support -->
+          <div class="footer-col">
+            <h4>SUPPORT</h4>
+            <div class="footer-links-duo">
+              <ul>
+                <li><a href="faq.html">System Status</a></li>
+                <li><a href="faq.html">Knowledge Base</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact.html">Report Abuse</a></li>
+              </ul>
+              <ul>
+                <li><a href="faq.html">Community Forum</a></li>
+                <li><a href="contact.html">Submit Ticket</a></li>
+                <li><a href="faq.html">Whois Lookup</a></li>
+                <li><a href="faq.html">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <p>&copy; 2026 Cloud Store. All rights reserved.</p>
+          <p>Designed for reliability, speed, and 99.99% uptime.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
